@@ -1,0 +1,82 @@
+/* Facilities section styling */
+.facilities {
+  background-color: #1199a1;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.facilities h2 {
+  color: white;
+  font-size: 2.5em;
+  margin-bottom: 40px;
+}
+
+.facilities-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.facility-item {
+  background-color: white; /* Default background color */
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  width: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease,
+    background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+}
+
+.facility-item h3 {
+  font-size: 1.2em;
+  margin-top: 10px;
+  color: #1199a1; /* Default text color */
+}
+
+.facility-icon {
+  font-size: 3em;
+  transition: transform 0.3s ease; /* Smooth transition for icon */
+  color: #1199a1; /* Default icon color */
+}
+
+/* Hover Effect */
+.facility-item:hover {
+  transform: scale(1.05); /* Slightly scale the item */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+  background-color: #1199a1; /* Change background color on hover */
+}
+
+.facility-item:hover .facility-icon {
+  transform: translateY(-10px) scale(1.2); /* Move the icon up and scale it */
+  color: white; /* Change the icon color to white on hover */
+}
+
+.facility-item:hover h3 {
+  color: white; /* Change the text color to white on hover */
+}
+
+@media (max-width: 768px) {
+  .facilities-container {
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .facility-item {
+    width: 100%;
+    width: 300px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .facilities h2 {
+    font-size: 2em;
+  }
+
+  .facility-item h3 {
+    font-size: 1em;
+  }
+}

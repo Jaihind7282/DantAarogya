@@ -1,0 +1,105 @@
+/* General Styles */
+.stats-container {
+  display: flex;
+  justify-content: space-around;
+  background-color: #1199a1;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 40px 90px;
+}
+
+.stats-item {
+  text-align: center;
+  max-width: 250px;
+  margin: 20px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px #119aa157;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.stats-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px #119aa17a; /* Enhanced shadow on hover */
+}
+
+/* Add a subtle background animation on hover */
+.stats-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(17, 153, 161, 0.1),
+    transparent
+  );
+  transition: left 0.5s ease;
+}
+
+.stats-item:hover::before {
+  left: 100%; /* Animate the background gradient */
+}
+
+.stats-icon {
+  font-size: 3rem;
+  color: #1199a1;
+  margin-bottom: 15px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.stats-item:hover .stats-icon {
+  transform: scale(1.1); /* Slightly enlarge the icon on hover */
+  color: #042e4b; /* Change icon color on hover */
+}
+
+.stats-item h2 {
+  font-size: 2rem;
+  color: #042e4b;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.stats-item:hover h2 {
+  color: #1199a1; /* Change heading color on hover */
+}
+
+.stats-item p {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 10px;
+  transition: color 0.3s ease;
+}
+
+.stats-item:hover p {
+  color: #042e4b; /* Change paragraph text color on hover */
+}
+
+.stats-description {
+  font-size: 1rem;
+  color: #888;
+  transition: color 0.3s ease;
+}
+
+.stats-item:hover .stats-description {
+  color: #666; /* Change description text color on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .stats-container {
+    flex-direction: column;
+    padding: 40px 30px;
+  }
+
+  .stats-item {
+    max-width: 100%;
+    margin: 10px 0;
+  }
+}

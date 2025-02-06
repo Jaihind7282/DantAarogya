@@ -1,0 +1,151 @@
+/* Hero Container */
+.hero-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+  width: 75%;
+  margin: 0 auto;
+  opacity: 0;
+  animation: fadeInContainer 2s ease-out 0.1s forwards; /* Fade in the whole container */
+}
+
+/* Hero Content */
+.hero-content {
+  max-width: 50%;
+  text-align: left;
+  opacity: 0;
+  transform: translateX(-30px); /* Slide in from left */
+  animation: slideInLeft 1.5s ease-out 0.1s forwards; /* Slide content in */
+}
+
+.hero-heading {
+  font-size: 2.5rem;
+  color: #2c3e50; /* Dark blue color */
+  margin-bottom: 1rem;
+  opacity: 0;
+  transform: translateY(-20px); /* Start from top */
+  animation: fadeInUp 1.5s ease-out 0.01s forwards; /* Fade-in and slide-up effect */
+}
+
+.hero-paragraph {
+  font-size: 1.2rem;
+  color: #34495e; /* Grayish blue color */
+  margin-bottom: 2rem;
+  opacity: 0;
+  transform: translateY(20px); /* Start from bottom */
+  animation: fadeInUp 1.5s ease-out 0.01s forwards; /* Fade-in and slide-up effect */
+}
+
+.hero-button {
+  text-decoration: none;
+  padding: 0.8rem 2rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #1199a1; /* Blue color */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px); /* Start from bottom */
+  animation: fadeInUp 1.5s ease-out 0.01s forwards; /* Fade-in and slide-up effect */
+}
+
+.hero-button:hover {
+  background-color: #042e4b;
+  transform: scale(1.05); /* Slight scale-up effect */
+}
+
+.hero-button:active {
+  transform: scale(0.98); /* Slight scale-down effect when clicked */
+}
+
+/* Hero Image */
+.hero-image {
+  max-width: 40%;
+  opacity: 0;
+  transform: translateX(30px); /* Start from the right */
+  animation: slideInRight 1.5s ease-out 0s forwards; /* Slide image in */
+}
+
+.responsive-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Animation for the entire container */
+@keyframes fadeInContainer {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Animation for the content sliding in */
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Animation for the heading fading and sliding up */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Animation for the image sliding in */
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem;
+    width: 90%; /* Increase width for smaller screens */
+  }
+
+  .hero-content {
+    max-width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .hero-heading {
+    font-size: 2rem;
+  }
+
+  .hero-paragraph {
+    font-size: 1rem;
+  }
+
+  .hero-image {
+    margin-top: 2rem;
+    max-width: 70%;
+  }
+}

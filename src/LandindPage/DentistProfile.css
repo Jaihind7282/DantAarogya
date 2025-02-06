@@ -1,0 +1,82 @@
+.doctor-profile {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center; /* Center the content */
+  padding: 60px 10px;
+  transition: all 0.3s ease; /* Smooth transition for profile */
+}
+
+.doctor-image {
+  width: 30%; /* Allocate 40% width to the image */
+  margin-right: 15%; /* Add margin between image and text */
+  transition: transform 0.3s ease-in-out; /* Smooth scale effect on hover */
+}
+
+.doctor-image img {
+  width: 80%;
+  height: auto;
+  border: #1199a1 3px solid;
+  border-radius: 25px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease; /* Adding shadow and scale effect */
+}
+
+.doctor-image:hover img {
+  transform: scale(1.1); /* Slight zoom effect */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Add shadow when hovered */
+}
+
+.doctor-details {
+  width: 30%; /* Allocate 40% width to the details */
+  transition: transform 0.3s ease; /* Smooth transition for text */
+}
+
+.doctor-details h2 {
+  color: #042e4b;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.doctor-details .qualifications {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.doctor-details .message {
+  font-size: 16px;
+  color: #777;
+  margin-bottom: 60px;
+}
+
+.know-more-link {
+  text-decoration: none;
+  padding: 10px 20px;
+  background-color: #1199a1;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.3s ease; /* Smooth transition for button */
+}
+
+.know-more-link:hover {
+  background-color: #042e4b;
+  transform: translateY(-5px); /* Slight upward movement on hover */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .doctor-profile {
+    flex-direction: column;
+    align-items: center;
+  }
+  .doctor-image img {
+    width: 100%;
+  }
+  .doctor-image,
+  .doctor-details {
+    width: 90%; /* Stack and take up 80% on smaller screens */
+    margin: 15px 0; /* Add margin to both sections */
+  }
+}

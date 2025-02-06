@@ -1,0 +1,60 @@
+/* ReviewCard.css */
+.review-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 400px; /* Adjust the height to suit your design */
+  position: relative;
+  background-color: #1199a1;
+}
+
+.review-card {
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+  text-align: center;
+  opacity: 0; /* Initially invisible */
+  transform: translateX(
+    100%
+  ); /* Initially positioned off-screen to the right */
+  animation: slideIn 0.6s forwards; /* Apply sliding animation */
+}
+
+/* Slide in animation */
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.review-image {
+  width: 100px;
+  height: 100px;
+  border: #1199a1 2px solid;
+  border-radius: 50%;
+  margin-bottom: 15px;
+}
+
+.review-name {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  color: #042e4b;
+}
+
+.review-stars {
+  font-size: 1.2em;
+  color: #ffd700;
+  margin-bottom: 10px;
+}
+
+.review-message {
+  font-size: 1em;
+  color: #555;
+}
